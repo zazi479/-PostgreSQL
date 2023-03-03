@@ -11,3 +11,13 @@
 - Using an implicit inner join.
 - Using a left outer join.
 - Using a right outer join.
+
+
+
+**EXPLICIT INNER JOIN VERSION:**
+```
+SELECT towns.name AS TownName,countries AS CountryName
+FROM Towns
+INNER JOIN countries ON towns.country = countries.id
+ORDER BY CountryName,TownName;
+```
