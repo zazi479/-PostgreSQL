@@ -76,7 +76,13 @@ Order  BY towns.name asc ,teams.name asc;
 ```
 
 **RIGHT OUTER JOIN VERSION:**
-
+```
+SELECT teams.name as TeamName,towns.name AS Name,countries.name AS CountryName
+FROM countries
+RIGHT JOIN towns on towns.country = countries.id
+RIGHT JOIN teams on teams.town = towns.id 
+Order  BY towns.name asc ,teams.name asc;
+```
 
 **FULL OUTER JOIN VERSION:**
 
@@ -95,13 +101,13 @@ ORDER BY towns.name asc;
 ```
 
 **LEFT OUTER JOIN VERSION:**
-
+```
 SELECT towns.name AS Name,count(teams.id) AS Num_Teams
 FROM towns
 LEFT OUTER join teams on teams.town = towns.id
 GROUP BY towns.name 
 ORDER BY towns.name asc;
-
+```
 
 **4. Show the name of the towns that don't have teams using a left outer join.**
 
