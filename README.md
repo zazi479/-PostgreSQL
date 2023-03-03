@@ -7,10 +7,10 @@
 
 
 **1. Show the name of the towns and its country name. Sort the results sorted by country name and town name. Make four versions:
-- Using an explicit inner join.
-- Using an implicit inner join.
-- Using a left outer join.
-- Using a right outer join.**
+-Using an explicit inner join.
+-Using an implicit inner join.
+-Using a left outer join.
+-Using a right outer join.
 
 
 **EXPLICIT INNER JOIN VERSION:**
@@ -51,7 +51,7 @@ ORDER BY CountryName,TownName;
 -Using an implicit inner join.
 -Using a left outer join.
 -Using a right outer join.
--Using a full outer join.**
+-Using a full outer join.
 
 
 **EXPLICIT INNER JOIN VERSION:**
@@ -77,7 +77,7 @@ Order  BY towns.name asc ,teams.name asc;
 
 **3. Select the name of the towns and the numbers of teams of the town. Sort the results by town name. Make two versions:
 -Using an explicit inner join.
--Using a left outer join.**
+-Using a left outer join.
 
 **EXPLICIT INNER JOIN VERSION:**
 ```
