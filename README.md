@@ -1,5 +1,8 @@
 # PostgreSQL
 
+# Install PostgreSQL
+
+![](https://github.com/zazi479/-PostgreSQL/blob/dfa19899c7918fd097825821d2b8478aa0a8218c/img/postgres.png)
 
 # BBDD_outer_joins
 
