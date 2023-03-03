@@ -20,6 +20,7 @@ FROM Towns
 INNER JOIN countries ON towns.country = countries.id
 ORDER BY CountryName,TownName;
 ```
+![](https://github.com/zazi479/-PostgreSQL/blob/9abf29a6da7f63ffb6a1baf33d4da73ed40cea07/img/1.1.png)
 
 **IMPLICIT INNER JOIN VERSION:**
 ```
@@ -28,6 +29,7 @@ FROM towns,countries
 WHERE towns.country = countries.id
 ORDER BY countries.name,towns.name;
 ```
+![](https://github.com/zazi479/-PostgreSQL/blob/9abf29a6da7f63ffb6a1baf33d4da73ed40cea07/img/1.2.png)
 
 **LEFT OUTER JOIN VERSION:**
 ```
@@ -36,6 +38,7 @@ FROM Towns
 LEFT OUTER JOIN countries on towns.country = countries.id
 ORDER BY CountryName,TownName;
 ```
+![](https://github.com/zazi479/-PostgreSQL/blob/9abf29a6da7f63ffb6a1baf33d4da73ed40cea07/img/1.3.png)
 
 **RIGHT OUTER JOIN VERSION:**
 ```
@@ -44,7 +47,7 @@ FROM towns
 RIGHT OUTER JOIN countries On towns.country = countries.id
 ORDER BY CountryName,TownName;
 ```
-
+![](https://github.com/zazi479/-PostgreSQL/blob/9abf29a6da7f63ffb6a1baf33d4da73ed40cea07/img/1.4.png)
 
 **2. Show the name of the teams with the town name and country name. Sort the results sorted by name of town and name of team. Make five versions:
 -Using an explicit inner join.
@@ -62,6 +65,7 @@ INNER join teams on teams.town = towns.id
 join countries on towns.country = countries.id
 Order  BY towns.name asc ,teams.name asc;
 ```
+![](https://github.com/zazi479/-PostgreSQL/blob/9abf29a6da7f63ffb6a1baf33d4da73ed40cea07/img/2.1.png)
 
 **IMPLICIT INNER JOIN VERSION:**
 ```
@@ -70,6 +74,7 @@ FROM countries,towns,teams
 WHERE  towns.country = countries.id AND  teams.town = towns.id 
 Order  BY towns.name asc ,teams.name asc;
 ```
+![](https://github.com/zazi479/-PostgreSQL/blob/9abf29a6da7f63ffb6a1baf33d4da73ed40cea07/img/2.2.png)
 
 **LEFT OUTER JOIN VERSION:**
 ```
@@ -79,6 +84,7 @@ LEFT JOIN towns on towns.country = countries.id
 LEFT JOIN teams on teams.town = towns.id 
 Order  BY towns.name asc ,teams.name asc;
 ```
+![](https://github.com/zazi479/-PostgreSQL/blob/9abf29a6da7f63ffb6a1baf33d4da73ed40cea07/img/2.3.png)
 
 **RIGHT OUTER JOIN VERSION:**
 ```
@@ -88,6 +94,7 @@ RIGHT JOIN towns on towns.country = countries.id
 RIGHT JOIN teams on teams.town = towns.id 
 Order  BY towns.name asc ,teams.name asc;
 ```
+![](https://github.com/zazi479/-PostgreSQL/blob/9abf29a6da7f63ffb6a1baf33d4da73ed40cea07/img/2.4.png)
 
 **FULL OUTER JOIN VERSION:**
 ```
@@ -97,6 +104,8 @@ FULL OUTER JOIN towns on towns.country = countries.id
 FULL OUTER JOIN teams on teams.town = towns.id 
 Order  BY towns.name asc ,teams.name asc;
 ```
+![](https://github.com/zazi479/-PostgreSQL/blob/9abf29a6da7f63ffb6a1baf33d4da73ed40cea07/img/2.5.png)
+
 
 **3. Select the name of the towns and the numbers of teams of the town. Sort the results by town name. Make two versions:
 -Using an explicit inner join.
@@ -110,6 +119,7 @@ INNER JOIN teams ON teams.town = towns.id
 GROUP BY towns.name
 ORDER BY towns.name asc;
 ```
+![](https://github.com/zazi479/-PostgreSQL/blob/9abf29a6da7f63ffb6a1baf33d4da73ed40cea07/img/3.1.png)
 
 **LEFT OUTER JOIN VERSION:**
 ```
@@ -119,6 +129,7 @@ LEFT OUTER join teams on teams.town = towns.id
 GROUP BY towns.name 
 ORDER BY towns.name asc;
 ```
+![](https://github.com/zazi479/-PostgreSQL/blob/9abf29a6da7f63ffb6a1baf33d4da73ed40cea07/img/3.2.png)
 
 **4. Show the name of the towns that don't have teams using a left outer join.**
 
@@ -128,8 +139,7 @@ FROM Towns
 LEFT OUTER JOIN countries ON towns.country = countries.id
 WHERE countries IS null;
 ```
-
-
+![](https://github.com/zazi479/-PostgreSQL/blob/9abf29a6da7f63ffb6a1baf33d4da73ed40cea07/img/4.png)
 
 
 
