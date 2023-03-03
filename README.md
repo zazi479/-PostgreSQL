@@ -64,7 +64,12 @@ Order  BY towns.name asc ,teams.name asc;
 ```
 
 **IMPLICIT INNER JOIN VERSION:**
-
+```
+SELECT teams.name as TeamName,towns.name AS Name,countries.name AS CountryName
+FROM countries,towns,teams
+WHERE  towns.country = countries.id AND  teams.town = towns.id 
+Order  BY towns.name asc ,teams.name asc;
+```
 
 **LEFT OUTER JOIN VERSION:**
 ```
