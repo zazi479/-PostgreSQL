@@ -143,7 +143,7 @@ LEFT JOIN teams
 ON towns.id = teams.town
 WHERE teams.town IS NULL;
 ```
-![](https://github.com/zazi479/-PostgreSQL/blob/9abf29a6da7f63ffb6a1baf33d4da73ed40cea07/img/atenas.png)
+![](https://github.com/zazi479/-PostgreSQL/blob/b5f93d55a95b24c526fc3c3566ba3e98495860df/img/atenas.png)
 
 
 
