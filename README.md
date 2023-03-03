@@ -85,7 +85,13 @@ Order  BY towns.name asc ,teams.name asc;
 ```
 
 **FULL OUTER JOIN VERSION:**
-
+```
+SELECT teams.name as TeamName,towns.name AS Name,countries.name AS CountryName
+FROM countries
+FULL OUTER JOIN towns on towns.country = countries.id
+FULL OUTER JOIN teams on teams.town = towns.id 
+Order  BY towns.name asc ,teams.name asc;
+```
 
 **3. Select the name of the towns and the numbers of teams of the town. Sort the results by town name. Make two versions:
 -Using an explicit inner join.
