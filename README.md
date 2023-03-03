@@ -67,7 +67,13 @@ Order  BY towns.name asc ,teams.name asc;
 
 
 **LEFT OUTER JOIN VERSION:**
-
+```
+SELECT teams.name as TeamName,towns.name AS Name,countries.name AS CountryName
+FROM countries
+LEFT JOIN towns on towns.country = countries.id
+LEFT JOIN teams on teams.town = towns.id 
+Order  BY towns.name asc ,teams.name asc;
+```
 
 **RIGHT OUTER JOIN VERSION:**
 
