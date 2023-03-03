@@ -137,10 +137,11 @@ ORDER BY towns.name asc;
 **4. Show the name of the towns that don't have teams using a left outer join.**
 
 ```
-SELECT towns.name AS TownName, countries.name AS CountryName
-FROM Towns
-LEFT OUTER JOIN countries ON towns.country = countries.id
-WHERE countries IS null;
+SELECT towns.name
+FROM towns
+LEFT JOIN teams
+ON towns.id = teams.town
+WHERE teams.town IS NULL;
 ```
 ![](https://github.com/zazi479/-PostgreSQL/blob/9abf29a6da7f63ffb6a1baf33d4da73ed40cea07/img/4.png)
 
